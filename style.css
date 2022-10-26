@@ -19,6 +19,8 @@ body {
 
 .container h2 {
   color: black;
-  font-weight: bold;
-  font-family: serif;
+  font-style: normal;
+  font-family: sans-serif, 'Inter';
+  font-size: 20px;
+  line-height: 28px;
 }
