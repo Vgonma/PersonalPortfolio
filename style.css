@@ -1,0 +1,24 @@
+body {
+  height: 100vh;
+  background-color: white;
+  background-image: url("images/header-illsutration-mobile@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.barItem {
+  margin: 0;
+  padding: 0;
+}
+
+.container h2 {
+  color: black;
+  font-weight: bold;
+  font-family: serif;
+}
