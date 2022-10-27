@@ -178,9 +178,11 @@ p {
 .aboutMe {
   margin: 22px;
   display: grid;
-  grid-template-columns: 'title' 'title' 'title';
+  grid-template-columns: 3;
+  grid-template-rows: auto;
   gap: 24px;
   justify-items: center;
+  align-items: center;
 }
 
 .aboutMeCard {
@@ -188,11 +190,12 @@ p {
   background-color: #ebf0ee;
   border-radius: 10px 10px 10px 10px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 327px;
-  max-width: 475px;
+  width: 325px;
 }
 
 .aboutMeCard img {
@@ -209,6 +212,7 @@ p {
   padding: 0;
   margin: 0 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 8px;
