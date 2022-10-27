@@ -1,12 +1,14 @@
-body {
-  height: 100vh;
-  background-color: white;
-  background-image: url("images/header-illsutration-mobile@2x.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+html {
+  scroll-behavior: smooth;
 }
 
-.container {
+body {
+  margin: 0;
+  height: 100%;
+  background-color: white;
+}
+
+.navContainer {
   margin: 20px;
   margin-top: 40px;
   padding: 10px;
@@ -28,15 +30,23 @@ body {
   text-align: center;
 }
 
+.mainTitle {
+  height: 100vh;
+  background-image: url("images/header-illsutration-mobile@2x.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .tittleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  margin: 10%;
+  padding: 24px;
 }
 
-.tittleContainer p {
+p {
   text-align: center;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -44,12 +54,22 @@ body {
   line-height: 28px;
 }
 
-.tittleContainer h1 {
+.title {
   text-align: center;
   font-size: 40px;
+  font-weight: 700;
   font-style: normal;
   font-family: 'Inter', sans-serif;
   line-height: 52px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+  line-height: 32px;
 }
 
 .mediaContainer {
@@ -59,6 +79,159 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: baseline;
+}
+
+.separator {
+  background-color: #36b37f;
+  width: 55px;
+  height: 6px;
+  margin: none;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.downArrow {
+  margin: 50px 0;
+}
+
+.myRecentWork {
+  margin: 22px;
+  display: grid;
+  grid-template-columns: 'title' 'title' 'title';
+  gap: 24px;
+  justify-items: center;
+}
+
+.myRecentWork hr {
+  margin: 20px 0 60px 0;
+}
+
+.workTitle {
+  margin-bottom: 0;
+}
+
+.workCard {
+  border: solid 1px #d0d9d4;
+  background-color: #ebf0ee;
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  height: 474px;
+  max-width: 475px;
+}
+
+.cardInfo {
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+  max-height: 50%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardInfo ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.infoListItem {
+  background-color: #ebf0ee;
+  border-radius: 4px;
+  padding: 8px 12px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.button {
+  background-color: #36b37e;
+  width: 122px;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  color: white;
+  text-align: center;
+}
+
+.button:active {
+  background-color: #008552;
+}
+
+.resumeButton {
+  width: 159px;
+  margin-bottom: 59px;
+}
+
+.aboutMe {
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: auto;
+  gap: 24px;
+  justify-items: center;
+  align-items: center;
+  background-image: url("images/illustration-\ about\ me-\ mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.aboutMeCard {
+  border: solid 1px #d0d9d4;
+  background-color: #ebf0ee;
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 327px;
+  width: 325px;
+}
+
+.aboutMeCard img {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 60px;
+}
+
+.aboutMeCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.aboutMeListItem {
+  background-color: white;
+  color: #36b37e;
+  border-radius: 4px;
+  padding: 8px 12px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .blue {
