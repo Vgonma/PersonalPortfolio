@@ -22,7 +22,7 @@ body {
 .container h2 {
   color: black;
   font-style: normal;
-  font-family: sans-serif, 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
@@ -40,7 +40,7 @@ body {
   text-align: center;
   font-size: 40px;
   font-style: normal;
-  font-family: sans-serif, 'Inter';
+  font-family: 'Inter', sans-serif;
   line-height: 52px;
 }
 
@@ -52,7 +52,7 @@ body {
 
 .helperText p {
   text-align: center;
-  font-family: sans-serif, 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
