@@ -45,7 +45,7 @@ body {
   margin: 24px;
 }
 
-.tittleContainer p {
+p {
   text-align: center;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -164,6 +164,10 @@ body {
   line-height: 24px;
   color: white;
   text-align: center;
+}
+
+.resumeButton {
+  width: 159px;
 }
 
 .blue {
