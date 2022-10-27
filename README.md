@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://vgonma.github.io/HelloMicroverse/) 
+[Live Demo Link](https://vgonma.github.io/PersonalPortfolio/) 
 
 
 ## Authors
