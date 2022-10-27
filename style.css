@@ -166,8 +166,64 @@ p {
   text-align: center;
 }
 
+.button:active {
+  background-color: #008552;
+}
+
 .resumeButton {
   width: 159px;
+  margin-bottom: 59px;
+}
+
+.aboutMe {
+  margin: 22px;
+  display: grid;
+  grid-template-columns: 'title' 'title' 'title';
+  gap: 24px;
+  justify-items: center;
+}
+
+.aboutMeCard {
+  border: solid 1px #d0d9d4;
+  background-color: #ebf0ee;
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 327px;
+  max-width: 475px;
+}
+
+.aboutMeCard img {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 60px;
+}
+
+.aboutMeCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.aboutMeListItem {
+  background-color: white;
+  color: #36b37e;
+  border-radius: 4px;
+  padding: 8px 12px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .blue {
