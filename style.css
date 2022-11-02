@@ -66,7 +66,7 @@ p {
 }
 
 /* Main page */
-@media (min-width: 380px) {
+@media (min-width: 768px) {
   .navContainer h2,
   nav {
     display: none;
@@ -106,7 +106,6 @@ p {
     border: none;
     box-shadow: 0 0 8px black;
     border-radius: 10px;
-    /* transition: color ease 0.3s; */
   }
 
   .mainTitle {
@@ -259,7 +258,7 @@ p {
 }
 
 /* My Recent Work */
-@media (min-width: 380px) {
+@media (min-width: 768px) {
   .separator {
     display: none;
   }
@@ -312,7 +311,7 @@ p {
 }
 
 /* About Me */
-@media (min-width: 380px) {
+@media (min-width: 768px) {
   .aboutMe {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
