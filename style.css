@@ -126,10 +126,17 @@ p {
   background-color: white;
   max-height: 50%;
   padding: 16px;
+  gap: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.cardInfo h3 {
+  width: 295px;
+  height: 97px;
+  margin: 0;
 }
 
 .cardInfo ul {
@@ -153,7 +160,8 @@ p {
 }
 
 .button {
-  background-color: #36b37e;
+  box-sizing: border-box;
+  background-color: #36b37f;
   width: 122px;
   height: 48px;
   border: none;
@@ -165,6 +173,10 @@ p {
   line-height: 24px;
   color: white;
   text-align: center;
+}
+
+.button:hover {
+  background-color: #36b37e;
 }
 
 .button:active {
