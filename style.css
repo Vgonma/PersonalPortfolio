@@ -523,11 +523,12 @@ p {
   .contactContainer h2 {
     box-sizing: border-box;
     margin: 0;
-    width: 30%;
+    width: 25%;
+    font-size: 1.5em;
   }
 
   .contactForm {
-    width: 60%;
+    width: 45%;
     padding: 1.2em;
     align-items: flex-start;
   }
