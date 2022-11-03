@@ -7,13 +7,15 @@
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  background-color: #333;
 }
 
 body {
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   height: 100%;
-  width: 100vw;
+  width: 100%;
+  max-width: 1920px;
   background-color: white;
   font-size: 20px;
 }
@@ -299,7 +301,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media (min-width: 900px) {
   .separator {
     display: none;
   }
@@ -383,6 +385,7 @@ p {
   .aboutMeCard {
     width: 100%;
     height: 352px;
+    gap: 1.2em;
   }
 }
 
@@ -445,7 +448,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6.4%;
+  gap: 1.2em;
   margin-top: 34px;
 }
 
@@ -493,4 +496,52 @@ p {
   color: #42526e;
   margin: 0;
   margin-bottom: 147px;
+}
+
+@media (min-width: 768px) {
+  .contactContainer {
+    background-image:
+      url(./images/illustration-1-contact-form-desktop.svg),
+      url(./images/illustration-2-contact-form-desktop.svg),
+      url(./images/contact\ form-illustratoin-3-desktop.svg);
+    background-position: center left, 200px 400px, right 120px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contactContainer h2 {
+    box-sizing: border-box;
+    margin: 0;
+    width: 30%;
+  }
+
+  .contactForm {
+    width: 60%;
+    padding: 1.2em;
+    align-items: flex-start;
+  }
+
+  .singleLineInput {
+    width: 100%;
+  }
+
+  .commentArea {
+    width: 100%;
+  }
+
+  .contactContainer p {
+    width: 100%;
+    border-bottom: 1px solid #dfe1e6;
+    margin: 0;
+  }
+
+  .contactContainer .mediaContainer {
+    width: 100%;
+    order: 1;
+    padding: 1em;
+  }
 }
