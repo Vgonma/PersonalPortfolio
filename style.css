@@ -159,6 +159,14 @@ p {
   align-items: baseline;
 }
 
+.mediaContainer img {
+  transition: transform 0.3s;
+}
+
+.mediaContainer img:hover {
+  transform: scale(1.4);
+}
+
 .separator {
   background-color: #36b37f;
   width: 55px;
@@ -238,6 +246,11 @@ p {
   font-weight: 600;
   font-size: 0.75em;
   line-height: 1em;
+  transition: 0.5s;
+}
+
+.infoListItem:hover {
+  background-color: #c6e6d8;
 }
 
 .button {
@@ -254,10 +267,12 @@ p {
   line-height: 6.4%;
   color: white;
   text-align: center;
+  transition: transform 1s;
 }
 
 .button:hover {
   background-color: #36b37e;
+  transform: scale(1.1);
 }
 
 .button:active {
