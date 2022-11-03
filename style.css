@@ -21,15 +21,25 @@ body {
 }
 
 .navContainer {
-  margin-top: 54px;
   padding: 0 6.4%;
-  display: flex;
+  padding-top: 0.5em;
   max-width: 100%;
   justify-content: space-between;
+  animation: nav-intro 2s ease 1.2s 1 normal forwards;
+  transform: translate(0, -80px);
+}
+
+@keyframes nav-intro {
+  from { transform: translate(0, -80px); }
+  to { transform: translate(0, 0); }
+}
+
+.hamburger {
+  order: 1;
 }
 
 .navContainer ul {
-  display: none;
+  visibility: hidden;
 }
 
 .barItem {
@@ -53,6 +63,13 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
+  animation: opacity 2s ease 0s 1 forwards;
+  opacity: 0%;
+}
+
+@keyframes opacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 p {
@@ -64,11 +81,9 @@ p {
 }
 
 .tittleContainer {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 15% 15% 0;
 }
 
 .tittleContainer p {
@@ -91,7 +106,7 @@ p {
     height: max-content;
     margin-top: 20px;
     list-style: none;
-    display: flex;
+    visibility: visible;
     justify-content: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
@@ -128,6 +143,7 @@ p {
   .tittleContainer {
     justify-content: flex-start;
     gap: 2%;
+    padding: 15% 15% 0;
   }
 }
 
@@ -151,11 +167,11 @@ p {
 
 .mediaContainer {
   list-style: none;
-  width: 53.33%;
+  gap: 1em;
   max-width: 200px;
   padding: 0;
-  display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: baseline;
 }
 
@@ -170,10 +186,16 @@ p {
 
 .downArrow {
   margin: 50px 0;
+  transition: transform 0.4s;
+}
+
+.downArrow:hover {
+  transform: translate(0, 0.5em);
 }
 
 .myRecentWork {
   margin: 1.1em;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.2em;
@@ -206,7 +228,7 @@ p {
   max-height: 50%;
   width: 100%;
   padding: 1em;
-  gap: 1em;
+  gap: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -350,17 +372,18 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1em;
   height: 327px;
   width: 325px;
 }
 
 .aboutMeCard img {
-  height: 50px;
-  width: 50px;
+  height: 4em;
+  width: 4em;
   background-color: white;
   padding: 15px;
+  margin-bottom: 1em;
   border-radius: 50%;
-  margin-bottom: 60px;
 }
 
 .aboutMeCard ul {
@@ -552,4 +575,8 @@ p {
     order: 1;
     padding: 1em;
   }
+}
+
+.flex {
+  display: flex;
 }
