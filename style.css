@@ -17,6 +17,7 @@ body {
   width: 100%;
   background-color: white;
   font-size: 20px;
+  max-width: 1920px;
 }
 
 .navContainer {
@@ -67,7 +68,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 6.4%;
+  padding: 15% 15% 0;
 }
 
 .tittleContainer p {
@@ -76,13 +77,13 @@ p {
 
 /* Main page */
 @media (min-width: 768px) {
-  .navContainer h2,
-  nav {
-    display: none;
-  }
-
   .navContainer {
     margin: 0;
+  }
+
+  .navContainer h2,
+  div {
+    display: none;
   }
 
   .navContainer ul {
@@ -301,24 +302,19 @@ p {
 }
 
 @media (min-width: 900px) {
-  .separator {
-    display: none;
-  }
-
   .myRecentWork {
-    grid-template-columns: repeat(3, 33.33%);
-    grid-template-rows: repeat(3, 1fr);
-    grid-auto-flow: row;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto auto;
     gap: 1.2em;
   }
 
   .myRecentWork h2 {
     grid-column: span 3;
-    margin: 40px;
   }
 
   .workCard {
-    max-width: none;
+    max-width: 18.45em;
     height: 474px;
     display: flex;
     flex-wrap: wrap;
@@ -331,6 +327,7 @@ p {
   }
 }
 
+/* About Me Section */
 .aboutMe {
   display: grid;
   grid-template-columns: 3;
@@ -357,37 +354,6 @@ p {
   width: 325px;
 }
 
-/* About Me */
-@media (min-width: 768px) {
-  .aboutMe {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    background-image:
-      url(./images/illustration-about\ me-1-desktop.png),
-      url(./images/illustration-about-me-2-desktop.png);
-    background-position: top right, center left;
-    background-size: auto;
-  }
-
-  .aboutMe h2 {
-    grid-column: span 3;
-  }
-
-  .aboutMe p {
-    grid-column: span 3;
-  }
-
-  .aboutMe button {
-    grid-column: span 3;
-  }
-
-  .aboutMeCard {
-    width: 100%;
-    height: 352px;
-    gap: 1.2em;
-  }
-}
-
 .aboutMeCard img {
   height: 50px;
   width: 50px;
@@ -400,7 +366,7 @@ p {
 .aboutMeCard ul {
   list-style: none;
   padding: 0;
-  margin: 0 10px;
+  margin: 0 0.5em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -418,6 +384,48 @@ p {
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
+}
+
+@media (min-width: 768px) {
+  .aboutMe {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    background-image:
+      url(./images/illustration-about\ me-1-desktop.png),
+      url(./images/illustration-about-me-2-desktop.png);
+    background-position: right 100px, center left;
+    background-size: auto;
+    padding-top: 8%;
+    margin-bottom: 8%;
+  }
+
+  .aboutMe h2 {
+    grid-column: span 3;
+  }
+
+  .aboutMe p {
+    grid-column: span 3;
+    max-width: 60%;
+  }
+
+  .aboutMe button {
+    margin: 0;
+    grid-column: span 3;
+  }
+
+  .aboutMeCard {
+    max-width: 18.45em;
+    height: 17.6em;
+    gap: 1.2em;
+  }
+
+  .aboutMeCard img {
+    margin: 0;
+    padding: 0;
+    height: 4em;
+    width: 4em;
+  }
 }
 
 .blue {
