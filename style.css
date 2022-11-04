@@ -179,10 +179,6 @@ p {
   transition: transform 0.3s;
 }
 
-.mediaContainer img:hover {
-  transform: scale(1.4);
-}
-
 .separator {
   background-color: #36b37f;
   width: 55px;
@@ -222,12 +218,12 @@ p {
   border: solid 1px #d0d9d4;
   background-color: #ebf0ee;
   border-radius: 10px;
-  display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
   height: 474px;
   width: 100%;
   max-width: 475px;
+  transition: transform 0.5s;
 }
 
 .cardInfo {
@@ -237,7 +233,6 @@ p {
   width: 100%;
   padding: 1em;
   gap: 0.5em;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -327,7 +322,6 @@ p {
   .workCard {
     max-width: none;
     height: 474px;
-    display: flex;
     flex-wrap: wrap;
   }
 
@@ -353,7 +347,6 @@ p {
   .workCard {
     max-width: 18.45em;
     height: 474px;
-    display: flex;
     flex-wrap: wrap;
   }
 
@@ -382,7 +375,6 @@ p {
   border: solid 1px #d0d9d4;
   background-color: #ebf0ee;
   border-radius: 10px 10px 10px 10px;
-  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
@@ -390,6 +382,7 @@ p {
   gap: 1em;
   height: 327px;
   width: 325px;
+  transition: transform 0.5s;
 }
 
 .aboutMeCard img {
@@ -399,6 +392,10 @@ p {
   padding: 15px;
   margin-bottom: 1em;
   border-radius: 50%;
+}
+
+.mediaContainer img:hover {
+  transform: scale(1.4);
 }
 
 .aboutMeCard ul {
@@ -490,7 +487,6 @@ p {
 }
 
 .contactForm {
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.2em;
@@ -594,4 +590,9 @@ p {
 
 .flex {
   display: flex;
+}
+
+.workCard:hover,
+.aboutMeCard:hover {
+  transform: scale(1.3);
 }
