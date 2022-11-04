@@ -1,19 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  background-color: #333;
 }
 
 body {
-  margin: 0;
+  box-sizing: border-box;
+  margin: auto;
   height: 100%;
+  width: 100%;
   background-color: white;
+  font-size: 20px;
+  max-width: 1920px;
+  background-image: url("./images/header-illsutration-mobile@2x.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 2em;
 }
 
 .navContainer {
-  margin: 20px;
-  margin-top: 40px;
-  padding: 10px;
-  display: flex;
+  padding: 0 6.4%;
+  padding-top: 0.5em;
+  max-width: 100%;
   justify-content: space-between;
+  animation: nav-intro 2s ease 1.2s 1 normal forwards;
+  transform: translate(0, -80px);
+}
+
+@keyframes nav-intro {
+  from { transform: translate(0, -80px); }
+  to { transform: translate(0, 0); }
+}
+
+.hamburger {
+  order: 1;
+}
+
+.navContainer ul {
+  visibility: hidden;
 }
 
 .barItem {
@@ -25,33 +55,102 @@ body {
   font-style: normal;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 5.33em;
+  line-height: 7.46%;
   text-align: center;
 }
 
 .mainTitle {
-  height: 100vh;
-  background-image: url("images/header-illsutration-mobile@2x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 100%;
+  width: 100%;
+  animation: opacity 2s ease 0s 1 forwards;
+  opacity: 0%;
 }
 
-.tittleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 24px;
+@keyframes opacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 p {
   text-align: center;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+.tittleContainer {
+  margin-top: 3em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2em;
+}
+
+.tittleContainer p {
+  max-width: 920px;
+}
+
+/* Main page */
+@media (min-width: 768px) {
+  body {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url("./images/Header-llustration-desktop@2x.svg");
+  }
+
+  .navContainer {
+    margin: 0;
+  }
+
+  .navContainer h2,
+  div {
+    display: none;
+  }
+
+  .navContainer ul {
+    width: 100%;
+    height: max-content;
+    margin-top: 20px;
+    list-style: none;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: #172b4d;
+  }
+
+  .navContainer ul li a {
+    padding: 25px 25px;
+    transition: background-color 0.5s ease;
+    border-radius: 10px;
+  }
+
+  .navContainer ul li a:link,
+  :visited {
+    text-decoration: none;
+    color: #172b4d;
+  }
+
+  .navContainer ul li a:hover {
+    background-color: #36b37f;
+    border: none;
+    box-shadow: 0 0 8px black;
+  }
+
+  .mainTitle {
+    height: 100vh;
+  }
+
+  .tittleContainer {
+    justify-content: flex-start;
+    gap: 2%;
+    padding: 15% 15% 0;
+  }
 }
 
 .title {
@@ -74,11 +173,17 @@ p {
 
 .mediaContainer {
   list-style: none;
-  width: 80%;
+  gap: 1em;
+  max-width: 200px;
   padding: 0;
-  display: flex;
-  justify-content: space-evenly;
+  margin: 0.4em;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: baseline;
+}
+
+.mediaContainer img {
+  transition: transform 0.3s;
 }
 
 .separator {
@@ -92,13 +197,19 @@ p {
 
 .downArrow {
   margin: 50px 0;
+  transition: transform 0.4s;
+}
+
+.downArrow:hover {
+  transform: translate(0, 0.5em);
 }
 
 .myRecentWork {
-  margin: 22px;
+  margin: 1.1em;
+  padding: 0;
   display: grid;
-  grid-template-columns: 'title' 'title' 'title';
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 1.2em;
   justify-items: center;
 }
 
@@ -113,36 +224,38 @@ p {
 .workCard {
   border: solid 1px #d0d9d4;
   background-color: #ebf0ee;
-  border-radius: 10px 10px 10px 10px;
-  display: flex;
+  border-radius: 10px;
   flex-direction: column-reverse;
   align-items: flex-end;
   height: 474px;
+  width: 100%;
   max-width: 475px;
+  transition: transform 0.5s;
 }
 
 .cardInfo {
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
   background-color: white;
   max-height: 50%;
-  padding: 16px;
-  gap: 16px;
-  display: flex;
+  width: 100%;
+  padding: 1em;
+  gap: 0.5em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .cardInfo h3 {
-  width: 295px;
-  height: 97px;
+  font-size: 1.2em;
   margin: 0;
 }
 
 .cardInfo ul {
+  max-width: 100%;
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -155,8 +268,13 @@ p {
   text-align: center;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75em;
+  line-height: 1em;
+  transition: 0.5s;
+}
+
+.infoListItem:hover {
+  background-color: #c6e6d8;
 }
 
 .button {
@@ -170,13 +288,15 @@ p {
   font-style: normal;
   font-size: 17px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 6.4%;
   color: white;
   text-align: center;
+  transition: transform 1s;
 }
 
 .button:hover {
   background-color: #36b37e;
+  transform: scale(1.1);
 }
 
 .button:active {
@@ -188,45 +308,114 @@ p {
   margin-bottom: 59px;
 }
 
+/* My Recent Work */
+@media only screen and (min-width: 768px) {
+  .separator {
+    display: none;
+  }
+
+  .myRecentWork {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: row;
+    gap: 1.2em;
+  }
+
+  .myRecentWork h2 {
+    grid-column: span 2;
+    margin: 40px;
+  }
+
+  .workCard {
+    max-width: none;
+    height: 474px;
+    flex-wrap: wrap;
+  }
+
+  .cardInfo {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .myRecentWork {
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto auto;
+    gap: 1.2em;
+  }
+
+  .myRecentWork h2 {
+    grid-column: span 3;
+  }
+
+  .workCard {
+    max-width: 18.45em;
+    height: 474px;
+    flex-wrap: wrap;
+  }
+
+  .cardInfo {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* About Me Section */
 .aboutMe {
+  padding: 3em 0;
   display: grid;
   grid-template-columns: 3;
   grid-template-rows: auto;
   gap: 24px;
   justify-items: center;
   align-items: center;
-  background-image: url("images/illustration-\ about\ me-\ mobile.png");
-  background-size: contain;
+  background-image:
+    url("./images/illustration-\ about\ me-\ mobile.png"),
+    url(./images/illustration\ 1-\ about\ me-mobile.svg);
+  background-size: auto;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top, right top;
 }
 
 .aboutMeCard {
   border: solid 1px #d0d9d4;
   background-color: #ebf0ee;
   border-radius: 10px 10px 10px 10px;
-  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1em;
   height: 327px;
   width: 325px;
+  transition: transform 0.5s;
+}
+
+.aboutMe p {
+  padding: 1em;
 }
 
 .aboutMeCard img {
-  height: 50px;
-  width: 50px;
+  height: 4em;
+  width: 4em;
   background-color: white;
   padding: 15px;
+  margin-bottom: 1em;
   border-radius: 50%;
-  margin-bottom: 60px;
+}
+
+.mediaContainer img:hover {
+  transform: scale(1.4);
 }
 
 .aboutMeCard ul {
   list-style: none;
   padding: 0;
-  margin: 0 10px;
+  margin: 0 0.5em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -244,6 +433,48 @@ p {
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
+}
+
+@media (min-width: 768px) {
+  .aboutMe {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    background-image:
+      url(./images/illustration-about\ me-1-desktop.png),
+      url(./images/illustration-about-me-2-desktop.png);
+    background-position: right 100px, center left;
+    background-size: auto;
+    padding-top: 8%;
+    margin-bottom: 8%;
+  }
+
+  .aboutMe h2 {
+    grid-column: span 3;
+  }
+
+  .aboutMe p {
+    grid-column: span 3;
+    max-width: 70%;
+  }
+
+  .aboutMe button {
+    margin: 0;
+    grid-column: span 3;
+  }
+
+  .aboutMeCard {
+    max-width: 18.45em;
+    height: 17.6em;
+    gap: 1.2em;
+  }
+
+  .aboutMeCard img {
+    margin: 0;
+    padding: 0;
+    height: 4em;
+    width: 4em;
+  }
 }
 
 .blue {
@@ -266,14 +497,13 @@ p {
 }
 
 .contactContainer h2 {
-  margin: 24px;
+  margin: 6.4%;
 }
 
 .contactForm {
-  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 1.2em;
   margin-top: 34px;
 }
 
@@ -291,7 +521,7 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 24px;
+  line-height: 6.4%;
   color: #6b778c;
 }
 
@@ -304,7 +534,7 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 24px;
+  line-height: 6.4%;
   color: #091e42;
   border: 1px solid #60c095;
   border-radius: 4px;
@@ -321,4 +551,65 @@ p {
   color: #42526e;
   margin: 0;
   margin-bottom: 147px;
+}
+
+@media (min-width: 768px) {
+  .contactContainer {
+    background-image:
+      url(./images/illustration-1-contact-form-desktop.svg),
+      url(./images/illustration-2-contact-form-desktop.svg),
+      url(./images/contact\ form-illustratoin-3-desktop.svg);
+    background-position: center left, 200px 400px, right 120px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contactContainer h2 {
+    box-sizing: border-box;
+    margin: 0;
+    width: 25%;
+    font-size: 1.5em;
+  }
+
+  .contactForm {
+    width: 45%;
+    padding: 1.2em;
+    align-items: flex-start;
+  }
+
+  .singleLineInput {
+    width: 100%;
+  }
+
+  .commentArea {
+    width: 100%;
+  }
+
+  .contactContainer p {
+    visibility: hidden;
+    width: 100%;
+    margin: 0;
+  }
+
+  .contactContainer ul {
+    max-width: none;
+    justify-content: center;
+    border-top: 1px solid #dfe1e6;
+    width: 100%;
+    order: 1;
+    padding: 1em;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.workCard:hover,
+.aboutMeCard:hover {
+  transform: scale(1.3);
 }
