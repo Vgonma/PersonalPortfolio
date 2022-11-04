@@ -18,6 +18,10 @@ body {
   background-color: white;
   font-size: 20px;
   max-width: 1920px;
+  background-image: url("./images/header-illsutration-mobile@2x.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 2em;
 }
 
 .navContainer {
@@ -57,12 +61,8 @@ body {
 }
 
 .mainTitle {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background-image: url("./images/header-illsutration-mobile@2x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center top;
   animation: opacity 2s ease 0s 1 forwards;
   opacity: 0%;
 }
@@ -81,9 +81,11 @@ p {
 }
 
 .tittleContainer {
+  margin-top: 3em;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  gap: 2em;
 }
 
 .tittleContainer p {
@@ -92,6 +94,13 @@ p {
 
 /* Main page */
 @media (min-width: 768px) {
+  body {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url("./images/Header-llustration-desktop@2x.svg");
+  }
+
   .navContainer {
     margin: 0;
   }
@@ -118,6 +127,7 @@ p {
   .navContainer ul li a {
     padding: 25px 25px;
     transition: background-color 0.5s ease;
+    border-radius: 10px;
   }
 
   .navContainer ul li a:link,
@@ -130,14 +140,10 @@ p {
     background-color: #36b37f;
     border: none;
     box-shadow: 0 0 8px black;
-    border-radius: 10px;
   }
 
   .mainTitle {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url("./images/Header-llustration-desktop@2x.svg");
+    height: 100vh;
   }
 
   .tittleContainer {
@@ -170,6 +176,7 @@ p {
   gap: 1em;
   max-width: 200px;
   padding: 0;
+  margin: 0.4em;
   flex-direction: row;
   justify-content: space-around;
   align-items: baseline;
@@ -359,16 +366,19 @@ p {
 
 /* About Me Section */
 .aboutMe {
+  margin: 2em 0;
   display: grid;
   grid-template-columns: 3;
   grid-template-rows: auto;
   gap: 24px;
   justify-items: center;
   align-items: center;
-  background-image: url("images/illustration-\ about\ me-\ mobile.png");
-  background-size: contain;
+  background-image:
+    url("./images/illustration-\ about\ me-\ mobile.png"),
+    url(./images/illustration\ 1-\ about\ me-mobile.svg);
+  background-size: auto;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top, right top;
 }
 
 .aboutMeCard {
@@ -383,6 +393,10 @@ p {
   height: 327px;
   width: 325px;
   transition: transform 0.5s;
+}
+
+.aboutMe p {
+  padding: 1em;
 }
 
 .aboutMeCard img {
@@ -441,7 +455,7 @@ p {
 
   .aboutMe p {
     grid-column: span 3;
-    max-width: 60%;
+    max-width: 70%;
   }
 
   .aboutMe button {
@@ -576,12 +590,15 @@ p {
   }
 
   .contactContainer p {
+    visibility: hidden;
     width: 100%;
-    border-bottom: 1px solid #dfe1e6;
     margin: 0;
   }
 
-  .contactContainer .mediaContainer {
+  .contactContainer ul {
+    max-width: none;
+    justify-content: center;
+    border-top: 1px solid #dfe1e6;
     width: 100%;
     order: 1;
     padding: 1em;
