@@ -17,7 +17,6 @@ body {
   width: 100%;
   background-color: white;
   font-size: 20px;
-  max-width: 1920px;
   background-image: url("./images/header-illsutration-mobile@2x.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -34,8 +33,13 @@ body {
 }
 
 @keyframes nav-intro {
-  from { transform: translate(0, -80px); }
-  to { transform: translate(0, 0); }
+  from {
+    transform: translate(0, -80px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
 }
 
 .hamburger {
@@ -53,7 +57,7 @@ body {
 
 .container h2 {
   font-style: normal;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 5.33em;
   line-height: 7.46%;
@@ -68,13 +72,18 @@ body {
 }
 
 @keyframes opacity {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 p {
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.4em;
@@ -93,72 +102,12 @@ p {
 }
 
 /* Main page */
-@media (min-width: 768px) {
-  body {
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-image: url("./images/Header-llustration-desktop@2x.svg");
-  }
-
-  .navContainer {
-    margin: 0;
-  }
-
-  .navContainer h2,
-  div {
-    display: none;
-  }
-
-  .navContainer ul {
-    width: 100%;
-    height: max-content;
-    margin-top: 20px;
-    list-style: none;
-    visibility: visible;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-    color: #172b4d;
-  }
-
-  .navContainer ul li a {
-    padding: 25px 25px;
-    transition: background-color 0.5s ease;
-    border-radius: 10px;
-  }
-
-  .navContainer ul li a:link,
-  :visited {
-    text-decoration: none;
-    color: #172b4d;
-  }
-
-  .navContainer ul li a:hover {
-    background-color: #36b37f;
-    border: none;
-    box-shadow: 0 0 8px black;
-  }
-
-  .mainTitle {
-    height: 100vh;
-  }
-
-  .tittleContainer {
-    justify-content: flex-start;
-    gap: 2%;
-    padding: 15% 15% 0;
-  }
-}
-
 .title {
   text-align: center;
   font-size: 40px;
   font-weight: 700;
   font-style: normal;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 52px;
 }
 
@@ -167,7 +116,7 @@ p {
   font-size: 24px;
   font-weight: 600;
   font-style: normal;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 32px;
 }
 
@@ -227,7 +176,7 @@ p {
   border-radius: 10px;
   flex-direction: column-reverse;
   align-items: flex-end;
-  height: 474px;
+  height: 100%;
   width: 100%;
   max-width: 475px;
   transition: transform 0.5s;
@@ -236,7 +185,7 @@ p {
 .cardInfo {
   border-radius: 10px;
   background-color: white;
-  max-height: 50%;
+  margin-top: 50%;
   width: 100%;
   padding: 1em;
   gap: 0.5em;
@@ -266,7 +215,7 @@ p {
   border-radius: 4px;
   padding: 8px 12px;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 0.75em;
   line-height: 1em;
@@ -279,12 +228,13 @@ p {
 
 .button {
   box-sizing: border-box;
-  background-color: #36b37f;
-  width: 122px;
+  background-color: #172b4d;
+  width: fit-content;
+  padding: 0 0.5em;
   height: 48px;
   border: none;
   border-radius: 4px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 17px;
   font-weight: 500;
@@ -295,7 +245,8 @@ p {
 }
 
 .button:hover {
-  background-color: #36b37e;
+  /* background-color: #36b37e; */
+  background-color: #1e488f;
   transform: scale(1.1);
 }
 
@@ -308,62 +259,6 @@ p {
   margin-bottom: 59px;
 }
 
-/* My Recent Work */
-@media only screen and (min-width: 768px) {
-  .separator {
-    display: none;
-  }
-
-  .myRecentWork {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-auto-flow: row;
-    gap: 1.2em;
-  }
-
-  .myRecentWork h2 {
-    grid-column: span 2;
-    margin: 40px;
-  }
-
-  .workCard {
-    max-width: none;
-    height: 474px;
-    flex-wrap: wrap;
-  }
-
-  .cardInfo {
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (min-width: 900px) {
-  .myRecentWork {
-    justify-content: center;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: auto auto auto;
-    gap: 1.2em;
-  }
-
-  .myRecentWork h2 {
-    grid-column: span 3;
-  }
-
-  .workCard {
-    max-width: 18.45em;
-    height: 474px;
-    flex-wrap: wrap;
-  }
-
-  .cardInfo {
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-  }
-}
-
 /* About Me Section */
 .aboutMe {
   padding: 3em 0;
@@ -374,8 +269,8 @@ p {
   justify-items: center;
   align-items: center;
   background-image:
-    url("./images/illustration-\ about\ me-\ mobile.png"),
-    url(./images/illustration\ 1-\ about\ me-mobile.svg);
+    url("./images/illustration-aboutme-mobile.png"),
+    url("./images/illustration1-aboutme-mobile.svg");
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top, right top;
@@ -386,12 +281,14 @@ p {
   background-color: #ebf0ee;
   border-radius: 10px 10px 10px 10px;
   flex-wrap: wrap;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1em;
   height: 327px;
-  width: 325px;
+  width: calc(100% - 1.4em);
+  max-width: 18.45em;
   transition: transform 0.5s;
 }
 
@@ -429,52 +326,10 @@ p {
   border-radius: 4px;
   padding: 8px 12px;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-}
-
-@media (min-width: 768px) {
-  .aboutMe {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    justify-content: center;
-    background-image:
-      url(./images/illustration-about\ me-1-desktop.png),
-      url(./images/illustration-about-me-2-desktop.png);
-    background-position: right 100px, center left;
-    background-size: auto;
-    padding-top: 8%;
-    margin-bottom: 8%;
-  }
-
-  .aboutMe h2 {
-    grid-column: span 3;
-  }
-
-  .aboutMe p {
-    grid-column: span 3;
-    max-width: 70%;
-  }
-
-  .aboutMe button {
-    margin: 0;
-    grid-column: span 3;
-  }
-
-  .aboutMeCard {
-    max-width: 18.45em;
-    height: 17.6em;
-    gap: 1.2em;
-  }
-
-  .aboutMeCard img {
-    margin: 0;
-    padding: 0;
-    height: 4em;
-    width: 4em;
-  }
 }
 
 .blue {
@@ -486,7 +341,7 @@ p {
 }
 
 .contactContainer {
-  background-image: url(./images/illustration-contact-form.svg);
+  background-image: url("./images/illustration-contact-form.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-position-x: 100%;
@@ -517,7 +372,7 @@ p {
 }
 
 .singleLineInput::placeholder {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -530,7 +385,7 @@ p {
   padding: 12px;
   width: 327px;
   height: 114px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -553,12 +408,116 @@ p {
   margin-bottom: 147px;
 }
 
+.flex {
+  display: flex;
+}
+
+.workCard:hover,
+.aboutMeCard:hover {
+  transform: scale(1.1);
+}
+
 @media (min-width: 768px) {
+  body {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url("./images/header-ilustration-desktop@2x.svg");
+  }
+
+  .navContainer {
+    margin: 0;
+  }
+
+  .navContainer h2,
+  div {
+    display: none;
+  }
+
+  .navContainer ul {
+    width: 100%;
+    height: max-content;
+    margin-top: 20px;
+    list-style: none;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: #172b4d;
+  }
+
+  .navContainer ul li a {
+    padding: 25px 25px;
+    transition: background-color 0.5s ease;
+    border-radius: 10px;
+  }
+
+  .navContainer ul li a:link,
+  :visited {
+    text-decoration: none;
+    color: #172b4d;
+  }
+
+  .navContainer ul li a:hover {
+    background-color: #36b37f;
+    border: none;
+    box-shadow: 0 0 8px black;
+  }
+
+  .tittleContainer {
+    justify-content: flex-start;
+    gap: 2%;
+    padding: 8em 15% 0;
+  }
+
+  .mainTitle {
+    height: 100vh;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .projecti-image {
+    min-height: 50%;
+  }
+
+  .myRecentWork {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: row;
+    gap: 1.2em;
+    padding-top: 0;
+  }
+
+  .myRecentWork h2 {
+    grid-column: span 2;
+    margin: 40px;
+  }
+
+  .workCard {
+    max-width: none;
+    height: 474px;
+    flex-wrap: wrap;
+  }
+
+  .cardInfo {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutMe {
+    margin-bottom: 10em;
+  }
+
   .contactContainer {
     background-image:
-      url(./images/illustration-1-contact-form-desktop.svg),
-      url(./images/illustration-2-contact-form-desktop.svg),
-      url(./images/contact\ form-illustratoin-3-desktop.svg);
+      url("./images/illustration-1-contact-form-desktop.svg"),
+      url("./images/illustration-2-contact-form-desktop.svg"),
+      url("./images/contact-form-illustratoin-3-desktop.svg");
     background-position: center left, 200px 400px, right 120px;
     background-repeat: no-repeat;
     background-size: auto;
@@ -605,11 +564,67 @@ p {
   }
 }
 
-.flex {
-  display: flex;
-}
+@media (min-width: 900px) {
+  .myRecentWork {
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto auto;
+    gap: 1.2em;
+  }
 
-.workCard:hover,
-.aboutMeCard:hover {
-  transform: scale(1.3);
+  .myRecentWork h2 {
+    grid-column: span 3;
+  }
+
+  .workCard {
+    max-width: 18.45em;
+    height: 474px;
+    flex-wrap: wrap;
+  }
+
+  .cardInfo {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutMe {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    background-image:
+      url("./images/illustration-about-me-1-desktop.png"),
+      url("./images/illustration-about-me-2-desktop.png");
+    background-position: right 100px, center left;
+    background-size: auto;
+    padding-top: 8%;
+    margin-bottom: 8%;
+  }
+
+  .aboutMe h2 {
+    grid-column: span 3;
+  }
+
+  .aboutMe p {
+    grid-column: span 3;
+    max-width: 70%;
+  }
+
+  .aboutMe button {
+    margin: 0;
+    grid-column: span 3;
+  }
+
+  .aboutMeCard {
+    max-width: 18.45em;
+    height: 17.6em;
+    gap: 1.2em;
+  }
+
+  .aboutMeCard img {
+    margin: 0;
+    padding: 0;
+    height: 4em;
+    width: 4em;
+  }
 }
