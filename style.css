@@ -98,7 +98,7 @@ p {
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center top;
-    background-image: url("./images/Header-llustration-desktop@2x.svg");
+    background-image: url("./images/header-ilustration-desktop@2x.svg");
   }
 
   .navContainer {
@@ -374,8 +374,8 @@ p {
   justify-items: center;
   align-items: center;
   background-image:
-    url("./images/illustration-\ about\ me-\ mobile.png"),
-    url(./images/illustration\ 1-\ about\ me-mobile.svg);
+    url("./images/illustration-aboutme-mobile.png"),
+    url(./images/illustration1-aboutme-mobile.svg);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top, right top;
@@ -441,7 +441,7 @@ p {
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
     background-image:
-      url(./images/illustration-about\ me-1-desktop.png),
+      url(./images/),
       url(./images/illustration-about-me-2-desktop.png);
     background-position: right 100px, center left;
     background-size: auto;
@@ -558,7 +558,7 @@ p {
     background-image:
       url(./images/illustration-1-contact-form-desktop.svg),
       url(./images/illustration-2-contact-form-desktop.svg),
-      url(./images/contact\ form-illustratoin-3-desktop.svg);
+      url(./images/contact-form-illustratoin-3-desktop.svg);
     background-position: center left, 200px 400px, right 120px;
     background-repeat: no-repeat;
     background-size: auto;
