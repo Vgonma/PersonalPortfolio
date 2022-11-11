@@ -12,6 +12,8 @@
 
 [Live Demo Link](https://vgonma.github.io/PersonalPortfolio/) 
 
+## Presentation video
+[Video Link](https://www.loom.com/share/44d1ffe41377460c9dfbf717c5b53d6e)
 
 ## Authors
 
