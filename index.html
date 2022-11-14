@@ -15,7 +15,7 @@
         <nav class="navContainer flex">
             <h2 class="barItem blue">Welcome</h2>
             <div class="hamburger">
-                <a href=""><img class="barItem" src="./images/icon-menu.png" alt="Burger Menu Icon" /></a>
+                <a href="#"><img class="barItem" src="./images/icon-menu.png" alt="Burger Menu Icon" /></a>
             </div>
             <ul class="flex">
                 <li><a href="#Work">Portfolio</a></li>
@@ -24,6 +24,14 @@
             </ul>
         </nav>
     </header>
+    <div class="mobile-menu">
+        <img class="closing-cross" src="./images/closing-icon.svg" alt="closing icon">
+        <ul class="flex title">
+            <li onclick="hideMenu()"><a href="#Work">Portfolio</a></li>
+            <li onclick="hideMenu()"><a href="#About">About</a></li>
+            <li onclick="hideMenu()"><a href="#Contact">Contact</a></li>
+        </ul>
+    </div>
     <section class="mainTitle tittleContainer flex">
         <h1 class="title blue">
             Hey there. I'm Victor<br /><span class="green">
@@ -223,6 +231,7 @@
         </ul>
         <p>myemailhere@email.com</p>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>
