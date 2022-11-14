@@ -2,10 +2,14 @@ const hamBurger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const clossingCross = document.querySelector('.closing-cross');
 
-hamBurger.addEventListener('click', function() {
-  mobileMenu.classList.add('mobile-menu-active')
+hamBurger.addEventListener('click', () => {
+  mobileMenu.classList.add('mobile-menu-active');
+  console.log('showMenu');
 });
 
-clossingCross.addEventListener('click', function() {
-  mobileMenu.classList.remove('mobile-menu-active')
-});
+function hideMenu() {
+  mobileMenu.classList.remove('mobile-menu-active');
+  console.log('hideMenu');
+}
+
+clossingCross.addEventListener('click', hideMenu);

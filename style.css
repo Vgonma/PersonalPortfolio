@@ -269,11 +269,11 @@ p {
   justify-items: center;
   align-items: center;
   background-image:
-    url("./images/illustration-aboutme-mobile.png"),
-    url("./images/illustration1-aboutme-mobile.svg");
+    url("./images/mobile-illustration-about-me-2.svg"),
+    url("./images/mobile-illustration-about-me-1.svg");
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: top, right top;
+  background-position: left 15em, right top;
 }
 
 .aboutMeCard {
@@ -435,6 +435,7 @@ p {
 
 .closing-cross {
   position: inherit;
+  cursor: pointer;
   top: 3em;
   right: 2.5em;
 }
