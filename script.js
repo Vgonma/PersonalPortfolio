@@ -1,65 +1,65 @@
-// objects
-const P1 = {
-  name: 'Project 1',
-  description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
-  image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
-  technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'https://vgonma.github.io/personalportfolio/',
-  github: 'https://github.com/Vgonma',
-};
+// Projects array
+const projects = [
+  {
+    name: 'Project 1',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
+    image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
+    technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
+    live: 'https://vgonma.github.io/personalportfolio/',
+    github: 'https://github.com/Vgonma',
+  },
 
-const P2 = {
-  name: 'Project 2',
-  description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
-  image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
-  technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'https://vgonma.github.io/personalportfolio/',
-  github: 'https://github.com/Vgonma',
-};
+  {
+    name: 'Project 2',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
+    image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
+    technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
+    live: 'https://vgonma.github.io/personalportfolio/',
+    github: 'https://github.com/Vgonma',
+  },
 
-const P3 = {
-  name: 'Project 3',
-  description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
-  image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
-  technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'https://vgonma.github.io/personalportfolio/',
-  github: 'https://github.com/Vgonma',
-};
+  {
+    name: 'Project 3',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
+    image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
+    technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
+    live: 'https://vgonma.github.io/personalportfolio/',
+    github: 'https://github.com/Vgonma',
+  },
 
-const P4 = {
-  name: 'Project 4',
-  description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
-  image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
-  technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'https://vgonma.github.io/personalportfolio/',
-  github: 'https://github.com/Vgonma',
-};
+  {
+    name: 'Project 4',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
+    image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
+    technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
+    live: 'https://vgonma.github.io/personalportfolio/',
+    github: 'https://github.com/Vgonma',
+  },
 
-const P5 = {
-  name: 'Project 5',
-  description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
-  image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
-  technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'https://vgonma.github.io/personalportfolio/',
-  github: 'https://github.com/Vgonma',
-};
+  {
+    name: 'Project 5',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
+    image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
+    technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
+    live: 'https://vgonma.github.io/personalportfolio/',
+    github: 'https://github.com/Vgonma',
+  },
 
-const P6 = {
-  name: 'Project 6',
-  description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
-  image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
-  technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'https://vgonma.github.io/personalportfolio/',
-  github: 'https://github.com/Vgonma',
-};
-
-const projects = [P1, P2, P3, P4, P5, P6];
+  {
+    name: 'Project 6',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
+    image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
+    technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
+    live: 'https://vgonma.github.io/personalportfolio/',
+    github: 'https://github.com/Vgonma',
+  },
+];
 const body = document.querySelector('body');
 
 const seeMore = document.querySelectorAll('.see-project-button');
