@@ -30,6 +30,8 @@ body {
   justify-content: space-between;
   animation: nav-intro 2s ease 1.2s 1 normal forwards;
   transform: translate(0, -80px);
+  position: relative;
+  z-index: 100;
 }
 
 @keyframes nav-intro {
@@ -44,6 +46,38 @@ body {
 
 .hamburger {
   order: 1;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: transparent;
+  position: relative;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.bar,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  margin: 0.5em 0;
+  background-color: #000;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  transition: 0.2s;
+}
+
+.hamburger.is-active::after {
+  transform: translate(0, -12px) rotate(45deg);
+}
+
+.hamburger.is-active::before {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
 }
 
 .navContainer ul {
@@ -418,19 +452,22 @@ p {
 }
 
 .mobile-menu {
-  display: none;
-  position: absolute;
+  display: block;
+  position: fixed;
+  left: 100%;
   top: 0;
   width: 100%;
   height: 95vh;
   background-color: white;
-  z-index: 100;
+  z-index: 98;
   border-bottom-left-radius: 3em;
   border-bottom-right-radius: 3em;
+  transition: 0.5s;
 }
 
 .mobile-menu-active {
   display: block;
+  left: 0;
 }
 
 .closing-cross {
