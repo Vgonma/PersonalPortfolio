@@ -715,6 +715,93 @@ p {
   .hamburger {
     display: none;
   }
+
+  .pop-up {
+    position: fixed;
+    overflow-y: scroll;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #c1c7d0f0;
+    z-index: 100;
+    padding: 5em;
+  }
+  
+  .pop-up-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 1em;
+  }
+  
+  .mobile-project-image {
+    display: none;
+  }
+
+  .desktop-project-image {
+    display: block;
+  }
+  
+  .disabled-button {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .pop-up-container h2 {
+    font-size: 32px;
+    font-weight: 600px;
+    line-height: 44px;
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+  
+  .pop-up-container ul {
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 2em;
+    column-gap: 1em;
+    order: 2;
+  }
+  
+  .pop-up-container p {
+    text-align: left;
+    order: 2;
+  }
+  
+  .pop-up-buttons {
+    width: 40%;
+    flex-wrap: nowrap;
+    gap: 1em;
+    order: 1;
+  }
+  
+  .pop-up-container h2 {
+    width: 60%;
+  }
+
+  .pop-up-buttons button {
+    margin: 0;
+    display: inline;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  main {
+    display: none;
+  }
 }
 
 @media (min-width: 900px) {
