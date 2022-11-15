@@ -23,6 +23,14 @@ body {
   background-position: center 2em;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
 .navContainer {
   padding: 0 6.4%;
   padding-top: 0.5em;
@@ -501,7 +509,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #c1c7d0;
   z-index: 100;
   padding: 1em;
@@ -512,7 +520,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   padding: 1em;
   background-color: #fff;
   border-radius: 10px;
@@ -521,7 +529,19 @@ p {
   flex-wrap: wrap;
 }
 
+.white-cross {
+  position: absolute;
+  display: block;
+  top: 2.6em;
+  right: 2.6em;
+  width: auto !important;
+}
+
 .pop-up-container img {
+  width: 100%;
+}
+
+.mobile-project-image {
   display: block;
   width: 100%;
 }
@@ -554,11 +574,24 @@ p {
   gap: 1em;
 }
 
+.pop-up-button-link {
+  width: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
 .pop-up-buttons button {
   margin: 0;
   display: inline;
-  flex-grow: 1;
-  flex-shrink: 1;
+  width: 100%;
+}
+
+.disabled-button {
+  display: none;
+}
+
+.desktop-project-image {
+  display: none;
 }
 
 .mediaContainer img:hover {
@@ -729,7 +762,7 @@ p {
     z-index: 100;
     padding: 5em;
   }
-  
+
   .pop-up-container {
     position: relative;
     top: 0;
@@ -744,7 +777,7 @@ p {
     flex-wrap: wrap;
     row-gap: 1em;
   }
-  
+
   .mobile-project-image {
     display: none;
   }
@@ -752,10 +785,14 @@ p {
   .desktop-project-image {
     display: block;
   }
-  
+
   .disabled-button {
-    display: inline-block;
+    display: block;
     margin-left: auto;
+  }
+
+  .disabled-button img {
+    width: auto;
   }
 
   .pop-up-container h2 {
@@ -764,9 +801,9 @@ p {
     line-height: 44px;
     text-align: left;
     display: block;
-    width: 100%;
+    width: 60%;
   }
-  
+
   .pop-up-container ul {
     flex-direction: row;
     align-items: center;
@@ -776,21 +813,17 @@ p {
     column-gap: 1em;
     order: 2;
   }
-  
+
   .pop-up-container p {
     text-align: left;
     order: 2;
   }
-  
+
   .pop-up-buttons {
     width: 40%;
     flex-wrap: nowrap;
     gap: 1em;
     order: 1;
-  }
-  
-  .pop-up-container h2 {
-    width: 60%;
   }
 
   .pop-up-buttons button {
@@ -799,6 +832,7 @@ p {
     flex-grow: 1;
     flex-shrink: 1;
   }
+
   main {
     display: none;
   }
