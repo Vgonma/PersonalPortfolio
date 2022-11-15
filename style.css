@@ -582,6 +582,10 @@ p {
   flex-shrink: 1;
 }
 
+.desktop-project-image img {
+  width: auto;
+}
+
 .pop-up-button-link button img {
   width: auto;
   margin-left: 1em;
@@ -600,10 +604,6 @@ p {
 
 .desktop-project-image {
   display: none;
-}
-
-.desktop-project-image img {
-  width: auto;
 }
 
 .mediaContainer img:hover {
