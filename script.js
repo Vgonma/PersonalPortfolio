@@ -13,7 +13,3 @@ mobileMenuItems.forEach((li) => {
     hamburger.classList.remove('is-active');
   });
 });
-// .addEventListener('click', () => {
-//   mobileMenu.classList.remove('mobile-menu-active');
-//   hamburger.classList.remove('is-active');
-// });
