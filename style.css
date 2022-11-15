@@ -542,7 +542,7 @@ p {
 }
 
 .mobile-project-image {
-  display: block;
+  display: flex;
   width: 100%;
 }
 
@@ -600,6 +600,10 @@ p {
 
 .desktop-project-image {
   display: none;
+}
+
+.desktop-project-image img {
+  width: auto;
 }
 
 .mediaContainer img:hover {
@@ -791,11 +795,15 @@ p {
   }
 
   .desktop-project-image {
-    display: block;
+    display: flex;
+    width: 100%;
+    justify-content: center;
   }
 
   .disabled-button {
-    display: block;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
     margin-left: auto;
   }
 
@@ -822,7 +830,6 @@ p {
     column-gap: 1em;
     order: 2;
   }
-
 
   .pop-up-container p {
     text-align: left;
