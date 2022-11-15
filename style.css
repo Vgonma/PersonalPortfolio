@@ -559,9 +559,11 @@ p {
   flex-direction: row;
   align-items: center;
   list-style: none;
+  flex-wrap: wrap;
   width: 100%;
-  height: 2em;
+  height: fit-content;
   column-gap: 1em;
+  row-gap: 0.5em;
 }
 
 .pop-up-container p {
@@ -814,11 +816,13 @@ p {
     flex-direction: row;
     align-items: center;
     list-style: none;
+    flex-wrap: wrap;
     width: 100%;
     height: 2em;
     column-gap: 1em;
     order: 2;
   }
+
 
   .pop-up-container p {
     text-align: left;
