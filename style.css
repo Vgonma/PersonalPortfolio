@@ -580,10 +580,16 @@ p {
   flex-shrink: 1;
 }
 
+.pop-up-button-link button img {
+  width: auto;
+  margin-left: 1em;
+}
+
 .pop-up-buttons button {
   margin: 0;
   display: inline;
   width: 100%;
+  text-align: center;
 }
 
 .disabled-button {
@@ -801,7 +807,7 @@ p {
     line-height: 44px;
     text-align: left;
     display: block;
-    width: 60%;
+    width: 50%;
   }
 
   .pop-up-container ul {
@@ -820,17 +826,25 @@ p {
   }
 
   .pop-up-buttons {
-    width: 40%;
+    width: 50%;
     flex-wrap: nowrap;
     gap: 1em;
     order: 1;
   }
 
-  .pop-up-buttons button {
-    margin: 0;
-    display: inline;
+  .pop-up-button-link {
     flex-grow: 1;
     flex-shrink: 1;
+  }
+
+  .pop-up-buttons button {
+    margin: 0;
+    display: block;
+  }
+
+  .pop-up-button-link button img {
+    width: auto;
+    margin-left: 0;
   }
 
   main {

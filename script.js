@@ -5,7 +5,7 @@ const P1 = {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
   image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
   technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'vgonma.github.io/personalportfolio/',
+  live: 'https://vgonma.github.io/personalportfolio/',
   github: 'https://github.com/Vgonma',
 };
 
@@ -15,7 +15,7 @@ const P2 = {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
   image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
   technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'vgonma.github.io/personalportfolio/',
+  live: 'https://vgonma.github.io/personalportfolio/',
   github: 'https://github.com/Vgonma',
 };
 
@@ -25,7 +25,7 @@ const P3 = {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
   image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
   technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'vgonma.github.io/personalportfolio/',
+  live: 'https://vgonma.github.io/personalportfolio/',
   github: 'https://github.com/Vgonma',
 };
 
@@ -35,7 +35,7 @@ const P4 = {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
   image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
   technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'vgonma.github.io/personalportfolio/',
+  live: 'https://vgonma.github.io/personalportfolio/',
   github: 'https://github.com/Vgonma',
 };
 
@@ -45,7 +45,7 @@ const P5 = {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
   image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
   technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'vgonma.github.io/personalportfolio/',
+  live: 'https://vgonma.github.io/personalportfolio/',
   github: 'https://github.com/Vgonma',
 };
 
@@ -55,7 +55,7 @@ const P6 = {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
   image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
   technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-  live: 'vgonma.github.io/personalportfolio/',
+  live: 'https://vgonma.github.io/personalportfolio/',
   github: 'https://github.com/Vgonma',
 };
 
@@ -85,8 +85,8 @@ seeMore.forEach((button) => {
         ${projects[button.id].description}
     </p>
     <div class="pop-up-buttons flex">
-      <a class="pop-up-button-link" href="${projects[button.id].live}" target="__blank"><button class="button"></button></a>
-      <a class="pop-up-button-link" href="${projects[button.id].github}" target="__blank><button class="button"></button></a>
+      <a class="pop-up-button-link" href="${projects[button.id].live}" target="__blank"><button class="button">See Live <img src="./images/icon-see-live.svg" alt=""></button></a>
+      <a class="pop-up-button-link" href="${projects[button.id].github}" target="__blank"><button class="button">See Source <img src="./images/icon-github-white.svg" alt=""></button></a>
     </div>
   </div>`;
     body.appendChild(popUp);
@@ -100,7 +100,12 @@ seeMore.forEach((button) => {
 
     const closeMobile = document.querySelector('.white-cross');
     const closeDesktop = document.querySelector('.disabled-button');
-    
+    closeMobile.addEventListener('click', () => {
+      body.removeChild(popUp);
+    });
+    closeDesktop.addEventListener('click', () => {
+      body.removeChild(popUp);
+    });
   });
 });
 
