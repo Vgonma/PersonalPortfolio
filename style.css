@@ -549,7 +549,7 @@ p {
 
 .pop-up-container h2 {
   font-size: 32px;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 44px;
   text-align: left;
   display: block;
@@ -585,6 +585,7 @@ p {
 
 .desktop-project-image img {
   width: auto;
+  max-width: 100%;
 }
 
 .pop-up-button-link button img {
@@ -781,6 +782,7 @@ p {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 1200px;
     height: fit-content;
     padding: 1em;
     background-color: #fff;
@@ -814,7 +816,7 @@ p {
 
   .pop-up-container h2 {
     font-size: 32px;
-    font-weight: 600px;
+    font-weight: 600;
     line-height: 44px;
     text-align: left;
     display: block;
@@ -838,7 +840,7 @@ p {
   }
 
   .pop-up-buttons {
-    width: 50%;
+    width: 45%;
     flex-wrap: nowrap;
     gap: 1em;
     order: 1;
