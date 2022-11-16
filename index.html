@@ -191,12 +191,13 @@
             I'm always interested in hearing about new projects, so if you'd like to
             chat please get in touch.
         </h2>
-        <form class="contactForm flex" action="https://formspree.io/f/mzbwkvzy" method="POST">
-            <input class="singleLineInput" name="name" type="text" placeholder="Full Name" maxlength="30" required />
-            <input class="singleLineInput" name="email" type="email" placeholder="Email address" required />
+        <form class="contactForm flex">
+            <input class="singleLineInput" id="name" name="name" type="text" placeholder="Full Name" maxlength="30" required />
+            <input class="singleLineInput" id="email" name="email" type="email" placeholder="Email address" required />
             <textarea class="commentArea" name="comments" placeholder="Enter text here" maxlength="500"
                 required></textarea>
-            <button class="button">Get in touch</button>
+            <button type="submit" id="submit-button" class="button">Get in touch</button>
+            <!-- <small class="submit-message" id="submit-message">alskdghf</small> -->
         </form>
         <ul class="mediaContainer flex">
             <li>

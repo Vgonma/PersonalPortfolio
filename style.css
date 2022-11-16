@@ -21,6 +21,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center 2em;
+  font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -607,6 +608,20 @@ p {
 
 .desktop-project-image {
   display: none;
+}
+
+.submit-message {
+  font-size: large;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.3em;
+  width: 100%;
+  transition: 2s;
+}
+
+.submit-message.error {
+  background-color: #ebf0ee;
+  color: #172b4d;
 }
 
 .mediaContainer img:hover {
