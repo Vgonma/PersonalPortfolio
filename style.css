@@ -508,6 +508,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: scroll;
   width: 100%;
   height: 100%;
   background-color: #c1c7d0;
