@@ -522,6 +522,7 @@ p {
   width: 100%;
   height: fit-content;
   padding: 1em;
+  gap: 1em;
   background-color: #fff;
   border-radius: 10px;
   justify-content: center;
