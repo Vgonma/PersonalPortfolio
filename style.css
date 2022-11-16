@@ -830,7 +830,6 @@ p {
     list-style: none;
     flex-wrap: wrap;
     width: 100%;
-    height: 2em;
     column-gap: 1em;
     order: 2;
   }
