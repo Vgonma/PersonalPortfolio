@@ -6,7 +6,7 @@ const projects = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquid cupiditate vitae tempore temporibus quo, eum pariatur. Neque sed ab in et architecto? In cumque obcaecati temporibus incidunt. A assumenda explicabo perspiciatis soluta tempora facilis suscipit culpa quo, alias nesciunt omnis similique quisquam fuga consectetur error laboriosam! Quis, quos repellendus.',
     image: ['./images/pop-up-image.svg', './images/snapshot-portfolio.svg'],
     technologies: ['codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Codepen'],
-    live: 'https://vgonma.github.io/personalportfolio/',
+    live: 'https://vgonma.github.io/PersonalPortfolio/',
     github: 'https://github.com/Vgonma',
   },
 
@@ -123,4 +123,34 @@ mobileMenuItems.forEach((li) => {
     mobileMenu.classList.remove('mobile-menu-active');
     hamburger.classList.remove('is-active');
   });
+});
+
+const form = document.querySelector('.contactForm');
+const email = document.querySelector('#email');
+const submitMessage = document.createElement('small');
+
+function validate() {
+  const temp = email.value.toLowerCase();
+  let i = 0;
+  let valid = true;
+  while (i < temp.length && valid) {
+    if (temp[i] !== email.value[i]) {
+      valid = false;
+    }
+    i += 1;
+  }
+  return valid;
+}
+
+form.addEventListener('submit', (e) => {
+  const valid = validate();
+  if (!valid) {
+    e.preventDefault();
+    submitMessage.classList.add('submit-message', 'error');
+    submitMessage.innerText = 'Email should be lowercase';
+    form.appendChild(submitMessage);
+  } else {
+    submitMessage.innerText = 'Form sent successfully';
+    submitMessage.classList.add('valid');
+  }
 });
