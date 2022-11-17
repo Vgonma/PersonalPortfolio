@@ -408,6 +408,10 @@ p {
   padding: 15px 16px;
   border: 1px solid #d0d9d4;
   border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .singleLineInput::placeholder {
