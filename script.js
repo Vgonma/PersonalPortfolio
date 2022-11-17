@@ -126,7 +126,9 @@ mobileMenuItems.forEach((li) => {
 });
 
 const form = document.querySelector('.contactForm');
+const formName = document.querySelector('#name');
 const email = document.querySelector('#email');
+const commentArea = document.querySelector('.commentArea');
 const submitMessage = document.createElement('small');
 
 function validate() {
@@ -153,4 +155,17 @@ form.addEventListener('submit', (e) => {
     submitMessage.innerText = 'Form sent successfully';
     submitMessage.classList.add('valid');
   }
+});
+
+let storedData = {
+  name: '',
+  email: '',
+  comments: '',
+};
+
+form.addEventListener('change', () => {
+  storedData.name = formName.value;
+  storedData.email = email.value;
+  storedData.comments = commentArea.value;
+  localStorage.setItem('formData', JSON.stringify(storedData));
 });
