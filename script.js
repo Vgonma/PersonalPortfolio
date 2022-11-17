@@ -169,3 +169,10 @@ form.addEventListener('change', () => {
   storedData.comments = commentArea.value;
   localStorage.setItem('formData', JSON.stringify(storedData));
 });
+
+if (JSON.parse(localStorage.getItem('formData')) !== null) {
+  storedData = JSON.parse(localStorage.getItem('formData'));
+  formName.setAttribute('value', storedData.name);
+  email.setAttribute('value', storedData.email);
+  commentArea.value = storedData.comments;
+}
